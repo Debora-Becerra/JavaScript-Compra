@@ -84,6 +84,9 @@ body {
 	padding: 50px 0;
 }
 
+.contenedor article p {
+	margin-bottom: 20px;
+}
 
 .contenedor article .btn-abrir-popup {
 	padding: 0 20px;
@@ -105,10 +108,11 @@ body {
 	background: rgba(94, 125, 227, .9);
 }
 
+/* ------------------------- */
 /* POPUP */
+/* ------------------------- */
 
 .overlay {
-	background: rgba(0, 0, 0, .3);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -116,12 +120,13 @@ body {
 	right: 0;
 	align-items: center;
 	justify-content: center;
-	display: initial;
+	display: flex;
 	visibility: hidden;
 }
 
 .overlay.active {
 	visibility: visible;
+	position: inherit;
 }
 
 .popup {
@@ -132,7 +137,7 @@ body {
 	padding: 20px;
 	text-align: center;
 	width: 600px;
-	position: relative;
+
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
@@ -197,7 +202,9 @@ body {
 	background: rgba(94, 125, 227, .9);
 }
 
+/* ------------------------- */
 /* ANIMACIONES */
+/* ------------------------- */
 .popup.active {
 	transform: scale(1);
 	opacity: 1;
