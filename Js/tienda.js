@@ -129,3 +129,28 @@ function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = '';//BORRA EL CONTENICO Y PONE CADENA VACIA
   updateShoppingCartTotal(); //BORRA EL PRECIO TOTAL
 }
+
+//NOVEDADES -BTN style
+var btnAbrirPopup = document.getElementById('btn-abrir-popup'), //acceder al btn para abrir
+  overlay = document.getElementById('overlay'), //acceder al overlay
+  popup = document.getElementById('popup'),//acceder al popup
+  btnCerrarPopup = document.getElementById('btn-cerrar-popup');//acceder boton cerrar
+
+btnAbrirPopup.addEventListener('click', function () { //al precionar btn, agrega clase active
+  overlay.classList.add('active');// agrega la clase active
+  popup.classList.add('active');//agrega clase active
+});
+
+btnCerrarPopup.addEventListener('click', function (e) { //
+  e.preventDefault();
+  overlay.classList.remove('active'); //Quitamos el active
+  popup.classList.remove('active');//quitamos
+});
+
+//Novedades--- storage
+function guardarDatos() {
+  localStorage.nombre = document.getElementById("nombreUsuario").value;
+  localStorage.correo = document.getElementById("correoUsuario").value;
+}
+
+btnSuscri.addEventListener("click", guardarDatos);

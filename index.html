@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--FUENTE-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
+    <!--FUENTE ICONO POPUP-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="./Css/style.css">
     <title>Tienda</title>
 </head>
@@ -25,6 +29,28 @@
             <hr>
         </div>
     </header>
+    <!--SUSCRIBIRSE-->
+    <div class="contenedor">
+        <article>
+            <h1>Novedades</h1>
+            <button id="btn-abrir-popup" class="btn-abrir-popup">Click aquí</button>
+        </article>
+
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h3>SUSCRIBETE</h3>
+                <h4>y recibe un cupon de descuento.</h4>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <input type="text" id="nombreUsuario" placeholder="Nombre">
+                        <input type="email" id="correoUsuario" placeholder="Correo">
+                    </div>
+                    <input type="submit" id="btnSuscri" class="btn-submit" value="Suscribirse">
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- START SECTION STORE -->
     <section class="store">
         <div class="container">
