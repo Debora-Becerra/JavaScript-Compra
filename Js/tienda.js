@@ -39,7 +39,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
       elementQuantity.value++;   //DEL VALOR QE TIENE, LO SUME
       $('.toast').toast('show');
       updateShoppingCartTotal(); //ACTUALIZACION DE PRECIO
-      return; //PARA QUENO SE DUPLIQUE EL ELEMENTO Y SOLO LO SUME
+      return; //PARA QUE NO SE DUPLIQUE EL ELEMENTO Y SOLO LO SUME
     }
   }
   //AÑADIENDO AL CARRITO
@@ -119,9 +119,7 @@ function removeShoppingCartItem(event) {
 function quantityChanged(event) {
   const input = event.target;
   //para queno se pueda poner numero negarivo
-  if (input.value <= 0) {
-    input.value = 1;
-  }
+  input.value <= 0 && (input.value = 1); //ahora usando operador AND
   updateShoppingCartTotal(); //actualizar el precio cada qe añado prodc
 }
 //AL DAR CLICK ENCOMPRAR, DEBE BORRAR EL CONTENIDO QUE TENIA
