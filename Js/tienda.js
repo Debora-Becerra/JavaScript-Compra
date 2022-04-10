@@ -234,3 +234,10 @@ function guardarDatos() {
 }
 
 btnSuscri.addEventListener("click", guardarDatos);
+
+// BOTON CON LIBRERIA
+const btnComprar = document.getElementById('boton-comprar');
+
+btnComprar.addEventListener('click', ()=> {
+    Swal.fire({title:"Gracias por su compra", text: "Imagine que su pedido está en camino.", icon:'success'})
+});
