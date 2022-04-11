@@ -51,9 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Funciones
 
-    /**
-    * Dibuja todos los productos a partir de la base de datos.
-    */
+    //Dibuja todos los productos a partir de la base de datos.
     function renderizarProductos() {
         baseDeDatos.forEach((info) => {
             // Estructura
@@ -90,9 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /**
-    * Evento para añadir un producto al carrito de la compra
-    */
+    //Evento para añadir un producto al carrito de la compra
     function anyadirProductoAlCarrito(evento) {
         // Anñadimos el Nodo a nuestro carrito
         carrito.push(evento.target.getAttribute('marcador'))
@@ -102,9 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         guardarCarritoEnLocalStorage();
     }
 
-    /**
-    * Dibuja todos los productos guardados en el carrito
-    */
+    //Dibuja todos los productos guardados en el carrito
     function renderizarCarrito() {
         // Vaciamos todo el html
         DOMcarrito.textContent = '';
@@ -141,9 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         DOMtotal.textContent = calcularTotal();
     }
 
-    /**
-    * Evento para borrar un elemento del carrito
-    */
+    //Evento para borrar un elemento del carrito
     function borrarItemCarrito(evento) {
         // Obtenemos el producto ID que hay en el boton pulsado
         const id = evento.target.dataset.item;
@@ -158,9 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    /**
-     * Calcula el precio total teniendo en cuenta los productos repetidos
-     */
+    //Calcula el precio total teniendo en cuenta los productos repetidos
     function calcularTotal() {
         // Recorremos el array del carrito 
         return carrito.reduce((total, item) => {
@@ -173,9 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 0).toFixed(2);
     }
 
-    /**
-    * Varia el carrito y vuelve a dibujarlo
-    */
+    //Varia el carrito y vuelve a dibujarlo
     function vaciarCarrito() {
         // Limpiamos los productos guardados
         carrito = [];
@@ -183,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
         // Borra LocalStorage
         localStorage.clear();
-
     }
 
     function guardarCarritoEnLocalStorage () {
@@ -207,7 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizarCarrito();
 });
 
-
 //NOVEDADES -BTN style
 var btnAbrirPopup = document.getElementById('btn-abrir-popup'), //acceder al btn para abrir
   overlay = document.getElementById('overlay'), //acceder al overlay
@@ -224,8 +210,6 @@ btnCerrarPopup.addEventListener('click', function (e) { //
   overlay.classList.remove('active'); //Quitamos el active
   popup.classList.remove('active');//quitamos
 });
-
-
 
 //Novedades--- storage
 function guardarDatos() {
