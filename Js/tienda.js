@@ -6,37 +6,37 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'ZAPATO BLANCO',
             precio: 7800,
-            imagen: './img/zapato-blanco1.jpg'
+            imagen: './img/zapatoblanco1.jpg'
         },
         {
             id: 2,
             nombre: 'ZAPATILLA VERDE',
             precio: 9000,
-            imagen: './img/zapatilla-verde2.jpg'
+            imagen: './img/zapatillaverde2.jpg'
         },
         {
             id: 3,
             nombre: 'ZAPATILLA DEPORTE',
             precio: 7600,
-            imagen: './img/zapatillas-deporte3.jpeg'
+            imagen: './img/zapatillasdeporte3.jpeg'
         },
         {
             id: 4,
             nombre: 'ZAPATILLAS BLANCAS',
             precio: 8100,
-            imagen: './img/zapatillas-blancas4.jpg'
+            imagen: './img/zapatillasblancas4.jpg'
         },
         {
             id: 5,
             nombre: 'ZAPATILLA ROJA',
             precio: 9200,
-            imagen: './img/zapatillas-Rojas5.jpg'
+            imagen: './img/zapatillasrojas5.jpg'
         },
         {
             id: 6,
             nombre: 'BORCEGO NEGRO',
             precio: 9500,
-            imagen: './img/Botas-Negras6.jpg'
+            imagen: './img/botasnagras6.jpg'
         }
     ];
 
