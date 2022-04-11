@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             precio: 9500,
             imagen: './img/Botas-Negras6.jpg'
         }
-
     ];
 
     let carrito = [];
@@ -86,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             miNodo.appendChild(miNodoCardBody);
             DOMitems.appendChild(miNodo);
         });
-    }
+    };
 
     //Evento para añadir un producto al carrito de la compra
     function anyadirProductoAlCarrito(evento) {
@@ -96,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
         // Actualizamos el LocalStorage
         guardarCarritoEnLocalStorage();
-    }
+    };
 
     //Dibuja todos los productos guardados en el carrito
     function renderizarCarrito() {
@@ -133,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         // Renderizamos el precio total en el HTML
         DOMtotal.textContent = calcularTotal();
-    }
+    };
 
     //Evento para borrar un elemento del carrito
     function borrarItemCarrito(evento) {
@@ -147,8 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
         // Actualizamos el LocalStorage
         guardarCarritoEnLocalStorage();
-
-    }
+    };
 
     //Calcula el precio total teniendo en cuenta los productos repetidos
     function calcularTotal() {
@@ -161,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Los sumamos al total
             return total + miItem[0].precio;
         }, 0).toFixed(2);
-    }
+    };
 
     //Varia el carrito y vuelve a dibujarlo
     function vaciarCarrito() {
@@ -171,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
         // Borra LocalStorage
         localStorage.clear();
-    }
+    };
 
     function guardarCarritoEnLocalStorage() {
         miLocalStorage.setItem('carrito', JSON.stringify(carrito));
-    }
+    };
 
     function cargarCarritoDeLocalStorage() {
         // ¿Existe un carrito previo guardado en LocalStorage?
@@ -183,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Carga la información
             carrito = JSON.parse(miLocalStorage.getItem('carrito'));
         }
-    }
+    };
 
     // Eventos
     DOMbotonVaciar.addEventListener('click', vaciarCarrito);
@@ -215,7 +213,7 @@ btnCerrarPopup.addEventListener('click', function (e) { //
 function guardarDatos() {
     localStorage.nombre = document.getElementById("nombreUsuario").value;
     localStorage.correo = document.getElementById("correoUsuario").value;
-}
+};
 
 btnSuscri.addEventListener("click", guardarDatos);
 
