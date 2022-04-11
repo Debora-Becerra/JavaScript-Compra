@@ -173,11 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.clear();
     }
 
-    function guardarCarritoEnLocalStorage () {
+    function guardarCarritoEnLocalStorage() {
         miLocalStorage.setItem('carrito', JSON.stringify(carrito));
     }
 
-    function cargarCarritoDeLocalStorage () {
+    function cargarCarritoDeLocalStorage() {
         // ¿Existe un carrito previo guardado en LocalStorage?
         if (miLocalStorage.getItem('carrito') !== null) {
             // Carga la información
@@ -196,25 +196,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //NOVEDADES -BTN style
 var btnAbrirPopup = document.getElementById('btn-abrir-popup'), //acceder al btn para abrir
-  overlay = document.getElementById('overlay'), //acceder al overlay
-  popup = document.getElementById('popup'),//acceder al popup
-  btnCerrarPopup = document.getElementById('btn-cerrar-popup');//acceder boton cerrar
+    overlay = document.getElementById('overlay'), //acceder al overlay
+    popup = document.getElementById('popup'),//acceder al popup
+    btnCerrarPopup = document.getElementById('btn-cerrar-popup');//acceder boton cerrar
 
 btnAbrirPopup.addEventListener('click', function () { //al precionar btn, agrega clase active
-  overlay.classList.add('active');// agrega la clase active
-  popup.classList.add('active');//agrega clase active
+    overlay.classList.add('active');// agrega la clase active
+    popup.classList.add('active');//agrega clase active
 });
 
 btnCerrarPopup.addEventListener('click', function (e) { //
-  e.preventDefault();
-  overlay.classList.remove('active'); //Quitamos el active
-  popup.classList.remove('active');//quitamos
+    e.preventDefault();
+    overlay.classList.remove('active'); //Quitamos el active
+    popup.classList.remove('active');//quitamos
 });
 
 //Novedades--- storage
 function guardarDatos() {
-  localStorage.nombre = document.getElementById("nombreUsuario").value;
-  localStorage.correo = document.getElementById("correoUsuario").value;
+    localStorage.nombre = document.getElementById("nombreUsuario").value;
+    localStorage.correo = document.getElementById("correoUsuario").value;
 }
 
 btnSuscri.addEventListener("click", guardarDatos);
@@ -222,6 +222,6 @@ btnSuscri.addEventListener("click", guardarDatos);
 // BOTON CON LIBRERIA
 const btnComprar = document.getElementById('boton-comprar');
 
-btnComprar.addEventListener('click', ()=> {
-    Swal.fire({title:"Gracias por su compra", text: "Imagine que su pedido está en camino.", icon:'success'})
+btnComprar.addEventListener('click', () => {
+    Swal.fire({ title: "Gracias por su compra", text: "Imagine que su pedido está en camino.", icon: 'success' })
 });

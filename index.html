@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,15 @@
     <!--CSS-->
     <link rel="stylesheet" href="./Css/style.css">
     <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--FUENTE-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
     <!--FUENTE ICONO POPUP-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <title>Document</title>
+    <title>Compras</title>
 </head>
+
 <body>
     <!-- Image and text -->
     <nav class="navbar navbar-light bg-light">
@@ -28,29 +31,29 @@
             <hr>
         </div>
     </header>
-        <!--SUSCRIBIRSE-->
-        <div class="contenedor">
-            <article>
-                <h1>Novedades</h1>
-                <button id="btn-abrir-popup" class="btn-abrir-popup">Click aquí</button>
-            </article>
-    
-            <div class="overlay" id="overlay">
-                <div class="popup" id="popup">
-                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h3>SUSCRIBETE</h3>
-                    <h4>y recibe un cupon de descuento.</h4>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="text" id="nombreUsuario" placeholder="Nombre">
-                            <input type="email" id="correoUsuario" placeholder="Correo">
-                        </div>
-                        <input type="submit" id="btnSuscri" class="btn-submit" value="Suscribirse">
-                    </form>
-                </div>
+    <!--SUSCRIBIRSE-->
+    <div class="contenedor">
+        <article>
+            <h1>Novedades</h1>
+            <button id="btn-abrir-popup" class="btn-abrir-popup">Click aquí</button>
+        </article>
+
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h3>SUSCRIBETE</h3>
+                <h4>y recibe un cupon de descuento.</h4>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <input type="text" id="nombreUsuario" placeholder="Nombre">
+                        <input type="email" id="correoUsuario" placeholder="Correo">
+                    </div>
+                    <input type="submit" id="btnSuscri" class="btn-submit" value="Suscribirse">
+                </form>
             </div>
         </div>
-        <!--fin suscrip-->
+    </div>
+    <!--fin suscrip-->
     <div class="container">
         <div class="row">
             <!-- Elementos generados a partir del JSON -->
@@ -70,7 +73,7 @@
     </div>
 
     <!-- START FOOTER -->
-    <footer class="bg-dark p-3 mt-5">
+    <footer class="bg-dark p-3 pt-0 mt-5">
         <p class="text-center m-0 text-muted">Urban</p>
     </footer>
     <!--LIBRERIA-->
@@ -78,4 +81,5 @@
     <!-- END FOOTER -->
     <script src="./js/tienda.js"></script>
 </body>
+
 </html>
