@@ -225,4 +225,18 @@ btnComprar.addEventListener('click', () => {
 });
 
 
-//probando modificaciones -
+//USO FETCH
+let url = 'script/sucursales.json'
+fetch(url)
+   .then(response => response.json())
+   .then(data => mostrarData(data))
+   .catch(error => console.log(error));
+
+   const mostrarData = (data) => {
+       console.log (data);
+       let body = ''
+       for (let i =0; i<data.length; i++){
+           body += `<tr><td>${data[i].id}</td><td>${data[i].direccion}</td><td>${data[i].contacto}</td></tr>`
+       }
+       document.getElementById('data').innerHTML = body
+   }

@@ -1,0 +1,17 @@
+[
+    {
+        "id": "Urban 1",
+        "direccion":"Corrientes 2500",
+        "contacto":"153674590"
+    },
+    {
+        "id": "Urban 2",
+        "direccion":"Alvarado 3840",
+        "contacto":"150983645"
+    },
+    {
+        "id": "Urban 3",
+        "direccion":"Av. Colón 1500",
+        "contacto":"152210984"
+    }
+]
