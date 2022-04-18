@@ -192,31 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizarCarrito();
 });
 
-//NOVEDADES -BTN style
-var btnAbrirPopup = document.getElementById('btn-abrir-popup'), //acceder al btn para abrir
-    overlay = document.getElementById('overlay'), //acceder al overlay
-    popup = document.getElementById('popup'),//acceder al popup
-    btnCerrarPopup = document.getElementById('btn-cerrar-popup');//acceder boton cerrar
-
-btnAbrirPopup.addEventListener('click', function () { //al precionar btn, agrega clase active
-    overlay.classList.add('active');// agrega la clase active
-    popup.classList.add('active');//agrega clase active
-});
-
-btnCerrarPopup.addEventListener('click', function (e) { //
-    e.preventDefault();
-    overlay.classList.remove('active'); //Quitamos el active
-    popup.classList.remove('active');//quitamos
-});
-
-//Novedades--- storage
-function guardarDatos() {
-    localStorage.nombre = document.getElementById("nombreUsuario").value;
-    localStorage.correo = document.getElementById("correoUsuario").value;
-};
-
-btnSuscri.addEventListener("click", guardarDatos);
-
 // BOTON CON LIBRERIA
 const btnComprar = document.getElementById('boton-comprar');
 
@@ -224,19 +199,18 @@ btnComprar.addEventListener('click', () => {
     Swal.fire({ title: "Gracias por su compra", text: "Imagine que su pedido está en camino.", icon: 'success' })
 });
 
-
 //USO FETCH
 let url = 'script/sucursales.json'
 fetch(url)
-   .then(response => response.json())
-   .then(data => mostrarData(data))
-   .catch(error => console.log(error));
+    .then(response => response.json())
+    .then(data => mostrarData(data))
+    .catch(error => console.log(error));
 
-   const mostrarData = (data) => {
-       console.log (data);
-       let body = ''
-       for (let i =0; i<data.length; i++){
-           body += `<tr><td>${data[i].id}</td><td>${data[i].direccion}</td><td>${data[i].contacto}</td></tr>`
-       }
-       document.getElementById('data').innerHTML = body
-   }
+const mostrarData = (data) => {
+    console.log(data);
+    let body = ''
+    for (let i = 0; i < data.length; i++) {
+        body += `<tr><td>${data[i].id}</td><td>${data[i].direccion}</td><td>${data[i].contacto}</td></tr>`
+    }
+    document.getElementById('data').innerHTML = body
+}
