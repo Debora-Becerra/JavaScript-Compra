@@ -10,34 +10,3 @@ body {
 }
 
 
-/*BARRA*/
-.barra {
-    padding: 20px 0;
-	margin-top: 60px;
-    background: #3611db; /* Old browsers */
-    background: -moz-linear-gradient(left, #4c09e7 0%, #e44e52 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #261d74 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #4107e0 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
-}
-
-.barra p {
-    margin:0;
-    color: white;
-}
-.icono {
-    background-repeat: no-repeat;
-    background-position: unset;
-    padding-left: 60px;
-    background-size: 100px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-@media (min-width: 750px) {
-    .icono {
-        margin-bottom:0;
-    }
-}
-.icono1 {
-    background-image: url(../img/iconoMaps.png);
-}
